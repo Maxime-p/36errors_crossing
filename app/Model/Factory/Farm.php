@@ -13,7 +13,7 @@ class Farm extends AbstractFactory{
   public function grow($farm){
     $q = "UPDATE farm SET stock = stock+3 WHERE id = :farm_id";
     $stmt = $this->pdo->prepare($q);
-    
+    $stmt->execute([":farm_id" => $farm->id]);
     return 1;
   }
 

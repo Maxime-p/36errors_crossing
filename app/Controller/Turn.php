@@ -34,6 +34,7 @@ class Turn extends General{
     // grow turnips in farm
     $farmFactory = new FarmFactory($this->pdo);
     $farms = $farmFactory->get_all();
+
     foreach ($farms as $farm) {
       $farmFactory->grow($farm);
     }
@@ -46,11 +47,11 @@ class Turn extends General{
       foreach ($villagers as $villager) {
         if($farmStock > 0 && $villager->village_id == $farm->village_id){
           $villagerFactory->acquireTurnip($villager);
+          $farmStock--;
         }else{
           break;
         }
       }
-      $farmStock--;
       $farmFactory->saveStock($farm, $farmStock);
     }
 
