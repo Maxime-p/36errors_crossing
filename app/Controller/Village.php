@@ -8,9 +8,9 @@ use \Model\Factory\Villager as VillagerFactory;
 use \Model\Factory\Market as MarketFactory;
 use \Model\Factory\Farm as FarmFactory;
 
-class Village{
+class Village {
 
-  public function createAction(Request $request){
+  public function newAction(Request $request){
     $name = $request->get("name");
     $villageFactory = new VillageFactory($this->pdo);
     $new_id = $villageFactory->add_one($name);
