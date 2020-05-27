@@ -22,9 +22,9 @@ class Turn extends General{
 
     //déplace les villageois
     foreach($villagers as $villager){
-      $pickRandomCity = random_int(0, count($villages));
+      $pickRandomCity = random_int(0, count($villages)-1);
       
-      $villagerFactory->moveVillagerTo($villages[$pickRandomCity]->id, $villager);
+      $villagerFactory->moveVillagerTo($villager, $villages[$pickRandomCity]->id);
     }
     //refresh
     $villagers = $villagerFactory->get_all();
