@@ -32,6 +32,7 @@ try{
   $controller = new $controllerName($pdo);
 
   $methodName = $actionName."Action";
+  var_dump($request);
   $controller->$methodName($request);
 
 }catch(Exception $e){
