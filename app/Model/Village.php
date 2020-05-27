@@ -16,7 +16,7 @@ class Village{
   }
 
   public function getVillagers(){
-    $this->villagers;
+    return $this->villagers;
   }
 
   public function hasMarket(){
