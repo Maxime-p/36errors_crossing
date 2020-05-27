@@ -6,9 +6,9 @@
   <form action="/villager/create" method="POST">
     <input type="text" class="input is-fullwidth" name="name" placeholder="Nom du villageois"><br>
     <select type="text" class="input is-fullwidth" name="village_id" >
-      <?php foreach($villages as $village):?>
+      <?php foreach($villages as $village): ?>
         <option 
-            value="<?php $village->id;?>"
+            value="<?php echo $village->id;?>"
         ><?php echo $village->getName()?></option>
       <?php endforeach;?>
 
