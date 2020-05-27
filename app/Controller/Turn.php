@@ -62,7 +62,7 @@ class Turn extends General{
     foreach($markets as $market){
       foreach ($villagers as $villager) {
         if($villager->turnips > 0 && $villager->village_id == $market->village_id){
-          $villagerFactory->exchangeTurnips($villagers);
+          $villagerFactory->exchangeTurnips($villager);
         }
       }
     }
