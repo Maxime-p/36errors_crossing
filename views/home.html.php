@@ -12,8 +12,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-three-quarters">
-          <article class="columns is-multiline">
-            <div>
+          <article class="columns is-multiline is-two-quarter">
             <?php if (count($villages) > 0): ?>
               <?php foreach ($villages as $village): ?>
                 <?php include("views/partials/village_card.html.php");?>
@@ -22,7 +21,6 @@
             <?php else: ?>  
               <em>Vous n'avez pas encore de villages</em>
             <?php endif ?>
-
 
           </article>
         </div>
