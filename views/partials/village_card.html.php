@@ -17,7 +17,7 @@
             &nbsp;  
           <?php endif ?>
           
-          <?php if ($village->getMarket()): ?>
+          <?php if ($village->hasMarket()): ?>
             <span>
             <i class="fas fa-university"></i>
             </span>
